@@ -141,6 +141,60 @@ AlgorytmyGrafowe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/build
 .PHONY : AlgorytmyGrafowe/fast
 
+EdgesSortedList.obj: EdgesSortedList.cpp.obj
+
+.PHONY : EdgesSortedList.obj
+
+# target to build an object file
+EdgesSortedList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj
+.PHONY : EdgesSortedList.cpp.obj
+
+EdgesSortedList.i: EdgesSortedList.cpp.i
+
+.PHONY : EdgesSortedList.i
+
+# target to preprocess a source file
+EdgesSortedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.i
+.PHONY : EdgesSortedList.cpp.i
+
+EdgesSortedList.s: EdgesSortedList.cpp.s
+
+.PHONY : EdgesSortedList.s
+
+# target to generate assembly for a file
+EdgesSortedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.s
+.PHONY : EdgesSortedList.cpp.s
+
+GraphRepresentation.obj: GraphRepresentation.cpp.obj
+
+.PHONY : GraphRepresentation.obj
+
+# target to build an object file
+GraphRepresentation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj
+.PHONY : GraphRepresentation.cpp.obj
+
+GraphRepresentation.i: GraphRepresentation.cpp.i
+
+.PHONY : GraphRepresentation.i
+
+# target to preprocess a source file
+GraphRepresentation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.i
+.PHONY : GraphRepresentation.cpp.i
+
+GraphRepresentation.s: GraphRepresentation.cpp.s
+
+.PHONY : GraphRepresentation.s
+
+# target to generate assembly for a file
+GraphRepresentation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.s
+.PHONY : GraphRepresentation.cpp.s
+
 LoadFromFile.obj: LoadFromFile.cpp.obj
 
 .PHONY : LoadFromFile.obj
@@ -167,6 +221,33 @@ LoadFromFile.s: LoadFromFile.cpp.s
 LoadFromFile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.s
 .PHONY : LoadFromFile.cpp.s
+
+Matrix.obj: Matrix.cpp.obj
+
+.PHONY : Matrix.obj
+
+# target to build an object file
+Matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj
+.PHONY : Matrix.cpp.obj
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -204,9 +285,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AlgorytmyGrafowe
+	@echo ... EdgesSortedList.obj
+	@echo ... EdgesSortedList.i
+	@echo ... EdgesSortedList.s
+	@echo ... GraphRepresentation.obj
+	@echo ... GraphRepresentation.i
+	@echo ... GraphRepresentation.s
 	@echo ... LoadFromFile.obj
 	@echo ... LoadFromFile.i
 	@echo ... LoadFromFile.s
+	@echo ... Matrix.obj
+	@echo ... Matrix.i
+	@echo ... Matrix.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.h
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.cpp
+iostream
+-
+Matrix.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.h
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.h
+EdgesSortedList.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.h
+

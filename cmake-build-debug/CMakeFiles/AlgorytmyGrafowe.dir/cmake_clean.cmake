@@ -2,7 +2,10 @@ file(REMOVE_RECURSE
   "AlgorytmyGrafowe.exe"
   "AlgorytmyGrafowe.exe.manifest"
   "AlgorytmyGrafowe.pdb"
+  "CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj"
+  "CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.obj"
+  "CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj"
   "libAlgorytmyGrafowe.dll.a"
 )

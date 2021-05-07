@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Header/GraphRepresentation.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    GraphRepresentation * gr = new GraphRepresentation(false);
+    gr->getList()->showList();
     return 0;
+
 }

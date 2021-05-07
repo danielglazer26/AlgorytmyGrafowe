@@ -101,21 +101,66 @@ CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\LoadFromFile.cpp -o CMakeFiles\AlgorytmyGrafowe.dir\LoadFromFile.cpp.s
 
+CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj: CMakeFiles/AlgorytmyGrafowe.dir/flags.make
+CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj: ../GraphRepresentation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AlgorytmyGrafowe.dir\GraphRepresentation.cpp.obj -c C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\GraphRepresentation.cpp
+
+CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\GraphRepresentation.cpp > CMakeFiles\AlgorytmyGrafowe.dir\GraphRepresentation.cpp.i
+
+CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\GraphRepresentation.cpp -o CMakeFiles\AlgorytmyGrafowe.dir\GraphRepresentation.cpp.s
+
+CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj: CMakeFiles/AlgorytmyGrafowe.dir/flags.make
+CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj: ../EdgesSortedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AlgorytmyGrafowe.dir\EdgesSortedList.cpp.obj -c C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\EdgesSortedList.cpp
+
+CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\EdgesSortedList.cpp > CMakeFiles\AlgorytmyGrafowe.dir\EdgesSortedList.cpp.i
+
+CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\EdgesSortedList.cpp -o CMakeFiles\AlgorytmyGrafowe.dir\EdgesSortedList.cpp.s
+
+CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj: CMakeFiles/AlgorytmyGrafowe.dir/flags.make
+CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj: ../Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AlgorytmyGrafowe.dir\Matrix.cpp.obj -c C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\Matrix.cpp
+
+CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\Matrix.cpp > CMakeFiles\AlgorytmyGrafowe.dir\Matrix.cpp.i
+
+CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\Matrix.cpp -o CMakeFiles\AlgorytmyGrafowe.dir\Matrix.cpp.s
+
 # Object files for target AlgorytmyGrafowe
 AlgorytmyGrafowe_OBJECTS = \
 "CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj" \
-"CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.obj"
+"CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.obj" \
+"CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj" \
+"CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj" \
+"CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj"
 
 # External object files for target AlgorytmyGrafowe
 AlgorytmyGrafowe_EXTERNAL_OBJECTS =
 
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.obj
+AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj
+AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj
+AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/build.make
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/linklibs.rsp
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/objects1.rsp
 AlgorytmyGrafowe.exe: CMakeFiles/AlgorytmyGrafowe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AlgorytmyGrafowe.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable AlgorytmyGrafowe.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AlgorytmyGrafowe.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

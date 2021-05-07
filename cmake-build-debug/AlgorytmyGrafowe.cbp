@@ -82,10 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.cpp">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.h">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/GraphRepresentation.cpp">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/GraphRepresentation.h">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/LoadFromFile.cpp">
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/LoadFromFile.h">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.cpp">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.h">
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/main.cpp">

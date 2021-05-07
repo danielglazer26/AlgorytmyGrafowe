@@ -92,12 +92,12 @@ clean: CMakeFiles/AlgorytmyGrafowe.dir/clean
 CMakeFiles/AlgorytmyGrafowe.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target AlgorytmyGrafowe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target AlgorytmyGrafowe"
 .PHONY : CMakeFiles/AlgorytmyGrafowe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AlgorytmyGrafowe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/AlgorytmyGrafowe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\elmod\CLionProjects\AlgorytmyGrafowe\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/AlgorytmyGrafowe.dir/rule
