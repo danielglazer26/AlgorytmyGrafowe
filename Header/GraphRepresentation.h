@@ -3,7 +3,7 @@
 #define ALGORYTMYGRAFOWE_GRAPHREPRESENTATION_H
 
 
-#include "EdgesSortedList.h"
+#include "CombinedList.h"
 #include "Matrix.h"
 #include "LoadFromFile.h"
 #include "Matrix.h"
@@ -15,12 +15,12 @@ public:
 
     ~GraphRepresentation(){
         delete matrix;
-        delete edgesSortedList;
+        delete combinedList;
     }
 
-    EdgesSortedList *getList();
+    CombinedList *getList();
 private:
-    EdgesSortedList *edgesSortedList;
+    CombinedList *combinedList;
     Matrix * matrix;
     int edgesNumber;
     int verticesNumber;

@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/CombinedList.h
 
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.cpp
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/GraphRepresentation.h
+CombinedList.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/CombinedList.h
+Matrix.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/Matrix.h
+LoadFromFile.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/LoadFromFile.h
+Matrix.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/Matrix.h
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/LoadFromFile.h
+fstream
+-
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/Matrix.h
+CombinedList.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/CombinedList.h
+
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/GraphRepresentation.cpp
 iostream
 -
-Matrix.h
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.h
-
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.h
-EdgesSortedList.h
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.h
+../Header/GraphRepresentation.h
+C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/GraphRepresentation.h
 

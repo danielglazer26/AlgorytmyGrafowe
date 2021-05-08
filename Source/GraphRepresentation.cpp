@@ -20,27 +20,25 @@ void GraphRepresentation::graphInitialization(bool directed) {
 
 void GraphRepresentation::createList(LoadFromFile *loadFromFile) {
 
-    edgesSortedList = new EdgesSortedList(edgesNumber);
+    combinedList = new CombinedList(verticesNumber);
     int *edge = new int[3];
     for (int i = 0; i < edgesNumber; i++) {
         for (int j = 0; j < 3; j++) {
             edge[j] = loadFromFile->getDataFromFile();
         }
-        edgesSortedList->createEdgeList(i, edge);
+        combinedList->createUndirectedList(edge, &edge[1], &edge[2]);
     }
     delete loadFromFile;
 }
 
 void GraphRepresentation::createMatrix(bool directed) {
     matrix = new Matrix(verticesNumber);
-    if (directed)
-        matrix->createDirectedMatrix();
-    else
-        matrix->createUndirectedMatrix(edgesSortedList);
+    matrix->createMatrix(combinedList);
+
     matrix->showMatrix();
     matrix->showMatrixWages();
 }
 
-EdgesSortedList *GraphRepresentation::getList() {
-    return edgesSortedList;
+CombinedList *GraphRepresentation::getList() {
+    return combinedList;
 }

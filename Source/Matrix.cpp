@@ -5,49 +5,41 @@
 void Matrix::createTables() {
 
     matrixTable = new int *[size];
-    matrixWages = new int **[size];
+    matrixWeights = new int **[size];
 
     for (int i = 0; i < size; i++) {
         matrixTable[i] = new int[size];
-        matrixWages[i] = new int *[size];
+        matrixWeights[i] = new int *[size];
     }
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             matrixTable[i][j] = 0;
-            matrixWages[i][j] = nullptr;
+            matrixWeights[i][j] = nullptr;
         }
     }
 }
 
-void Matrix::createDirectedMatrix(EdgesSortedList *edgesSortedList) {
+void Matrix::createMatrix(CombinedList *combinedList) {
 
-    for (int i = 0; i < edgesSortedList->getSize(); i++) {
+    for (int i = 0; i < combinedList->getSize(); i++) {
 
-        int x = edgesSortedList->getList()[i][0];           //wierzcholek poczatkowy
-        int y = edgesSortedList->getList()[i][1];           //wierzcholek koncowy
-        int z = edgesSortedList->getList()[i][2];           //waga
+        CombinedList::edge * pointer = combinedList->getList()[i];
+        while (true) {
+            int vE = pointer->vertex;
+            int w = pointer->weight;
 
-        matrixTable[x][y] = 1;
+            matrixTable[i][vE] = 1;
+            matrixWeights[i][vE] = new int[1];
+            *matrixWeights[i][vE] = w;
 
-        matrixWages[x][y] = new int[1];
-        *matrixWages[x][y] = z;
+            if(pointer->next!= nullptr)
+                pointer = pointer->next;
+            else
+                break;
+        }
     }
 }
 
-void Matrix::createUndirectedMatrix(EdgesSortedList *edgesSortedList) {
-    for (int i = 0; i < edgesSortedList->getSize(); i++) {
-
-        int x = edgesSortedList->getList()[i][0];           //wierzcholek poczatkowy
-        int y = edgesSortedList->getList()[i][1];           //wierzcholek koncowy
-        int z = edgesSortedList->getList()[i][2];           //waga
-
-        matrixTable[x][y] = matrixTable[y][x] = 1;
-
-        matrixWages[x][y] = new int[1];
-        matrixWages[y][x] = new int[1];
-        *matrixWages[y][x] = *matrixWages[x][y] = z;
-    }
-}
 
 
 void Matrix::showMatrix() {
@@ -78,8 +70,8 @@ void Matrix::showMatrixWages() {
             if (i == 0)
                 std::cout << j << " ";
             else {
-                if (matrixWages[i - 1][j] != nullptr)
-                    std::cout << *matrixWages[i - 1][j];
+                if (matrixWeights[i - 1][j] != nullptr)
+                    std::cout << *matrixWeights[i - 1][j];
                 else
                     std::cout << "N";
 
@@ -99,8 +91,8 @@ void Matrix::showMatrixWages() {
 void Matrix::deleteMatrixTable() {
     for (int i = 0; i < size; i++) {
         delete[] matrixTable[i];
-        delete[] matrixWages[i];
+        delete[] matrixWeights[i];
     }
     delete matrixTable;
-    delete matrixWages;
+    delete matrixWeights;
 }

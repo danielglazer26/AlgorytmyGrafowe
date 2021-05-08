@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/EdgesSortedList.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/EdgesSortedList.cpp.obj"
-  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/GraphRepresentation.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/GraphRepresentation.cpp.obj"
-  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/LoadFromFile.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/LoadFromFile.cpp.obj"
-  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Matrix.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Matrix.cpp.obj"
+  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/CombinedList.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/CombinedList.cpp.obj"
+  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/GraphRepresentation.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj"
+  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/LoadFromFile.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/LoadFromFile.cpp.obj"
+  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/Matrix.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/Matrix.cpp.obj"
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/main.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

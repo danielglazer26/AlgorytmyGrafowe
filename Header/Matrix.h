@@ -3,7 +3,7 @@
 #define ALGORYTMYGRAFOWE_MATRIX_H
 
 
-#include "EdgesSortedList.h"
+#include "CombinedList.h"
 
 class Matrix {
 public:
@@ -20,15 +20,14 @@ public:
 
     void showMatrixWages();
 
-    void createDirectedMatrix(EdgesSortedList *edgesSortedList);
+    void createMatrix(CombinedList *combinedList);
 
-    void createUndirectedMatrix(EdgesSortedList *list);
 private:
     int size;
 
     int **matrixTable;
 
-    int ***matrixWages;
+    int ***matrixWeights;
 
     void createTables();
 
