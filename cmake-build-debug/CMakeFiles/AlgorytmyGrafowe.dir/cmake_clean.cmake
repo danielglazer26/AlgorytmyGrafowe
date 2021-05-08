@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "AlgorytmyGrafowe.pdb"
   "CMakeFiles/AlgorytmyGrafowe.dir/Source/CombinedList.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj"
+  "CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/Source/LoadFromFile.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/Source/Matrix.cpp.obj"
   "CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj"

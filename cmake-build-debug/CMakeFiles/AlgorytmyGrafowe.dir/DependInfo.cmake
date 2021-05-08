@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/CombinedList.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/CombinedList.cpp.obj"
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/GraphRepresentation.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj"
+  "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/KruskalAlgorithm.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj"
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/LoadFromFile.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/LoadFromFile.cpp.obj"
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/Matrix.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/Source/Matrix.cpp.obj"
   "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/main.cpp" "C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj"

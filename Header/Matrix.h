@@ -22,6 +22,12 @@ public:
 
     void createMatrix(CombinedList *combinedList);
 
+    int getSize() const;
+
+    int **getMatrixTable() const;
+
+    int ***getMatrixWeights() const;
+
 private:
     int size;
 

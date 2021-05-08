@@ -88,6 +88,9 @@
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/GraphRepresentation.h">
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/KruskalAlgorithm.h">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Header/LoadFromFile.h">
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
@@ -98,6 +101,9 @@
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/GraphRepresentation.cpp">
+			<Option target="AlgorytmyGrafowe"/>
+		</Unit>
+		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/KruskalAlgorithm.cpp">
 			<Option target="AlgorytmyGrafowe"/>
 		</Unit>
 		<Unit filename="C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/Source/LoadFromFile.cpp">

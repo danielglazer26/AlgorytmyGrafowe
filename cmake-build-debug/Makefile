@@ -195,6 +195,33 @@ Source/GraphRepresentation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.s
 .PHONY : Source/GraphRepresentation.cpp.s
 
+Source/KruskalAlgorithm.obj: Source/KruskalAlgorithm.cpp.obj
+
+.PHONY : Source/KruskalAlgorithm.obj
+
+# target to build an object file
+Source/KruskalAlgorithm.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj
+.PHONY : Source/KruskalAlgorithm.cpp.obj
+
+Source/KruskalAlgorithm.i: Source/KruskalAlgorithm.cpp.i
+
+.PHONY : Source/KruskalAlgorithm.i
+
+# target to preprocess a source file
+Source/KruskalAlgorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.i
+.PHONY : Source/KruskalAlgorithm.cpp.i
+
+Source/KruskalAlgorithm.s: Source/KruskalAlgorithm.cpp.s
+
+.PHONY : Source/KruskalAlgorithm.s
+
+# target to generate assembly for a file
+Source/KruskalAlgorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AlgorytmyGrafowe.dir\build.make CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.s
+.PHONY : Source/KruskalAlgorithm.cpp.s
+
 Source/LoadFromFile.obj: Source/LoadFromFile.cpp.obj
 
 .PHONY : Source/LoadFromFile.obj
@@ -291,6 +318,9 @@ help:
 	@echo ... Source/GraphRepresentation.obj
 	@echo ... Source/GraphRepresentation.i
 	@echo ... Source/GraphRepresentation.s
+	@echo ... Source/KruskalAlgorithm.obj
+	@echo ... Source/KruskalAlgorithm.i
+	@echo ... Source/KruskalAlgorithm.s
 	@echo ... Source/LoadFromFile.obj
 	@echo ... Source/LoadFromFile.i
 	@echo ... Source/LoadFromFile.s

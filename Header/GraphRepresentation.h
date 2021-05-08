@@ -19,11 +19,22 @@ public:
     }
 
     CombinedList *getList();
+    Matrix *getMatrix();
+
+    int getEdgesNumber() const;
+
+    int getVerticesNumber() const;
+
+    int getStartingVertex() const;
+
+    int getEndingVertex() const;
+
 private:
     CombinedList *combinedList;
     Matrix * matrix;
     int edgesNumber;
     int verticesNumber;
+
     int startingVertex;
 
     int endingVertex;

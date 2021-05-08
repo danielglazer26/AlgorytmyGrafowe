@@ -42,3 +42,22 @@ void GraphRepresentation::createMatrix(bool directed) {
 CombinedList *GraphRepresentation::getList() {
     return combinedList;
 }
+Matrix *GraphRepresentation::getMatrix(){
+    return matrix;
+}
+
+int GraphRepresentation::getEdgesNumber() const {
+    return edgesNumber;
+}
+
+int GraphRepresentation::getVerticesNumber() const {
+    return verticesNumber;
+}
+
+int GraphRepresentation::getStartingVertex() const {
+    return startingVertex;
+}
+
+int GraphRepresentation::getEndingVertex() const {
+    return endingVertex;
+}

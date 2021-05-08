@@ -73,7 +73,7 @@ void Matrix::showMatrixWages() {
                 if (matrixWeights[i - 1][j] != nullptr)
                     std::cout << *matrixWeights[i - 1][j];
                 else
-                    std::cout << "N";
+                    std::cout << "-";
 
                 std::cout << " ";
             }
@@ -95,4 +95,16 @@ void Matrix::deleteMatrixTable() {
     }
     delete matrixTable;
     delete matrixWeights;
+}
+
+int Matrix::getSize() const {
+    return size;
+}
+
+int **Matrix::getMatrixTable() const {
+    return matrixTable;
+}
+
+int ***Matrix::getMatrixWeights() const {
+    return matrixWeights;
 }
