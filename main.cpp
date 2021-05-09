@@ -1,10 +1,11 @@
 #include <iostream>
-#include "Header/GraphRepresentation.h"
+#include "Header/KruskalAlgorithm.h"
 
 int main() {
 
-    GraphRepresentation * gr = new GraphRepresentation(false);
-    gr->getList()->showList();
+    KruskalAlgorithm kruskalAlgorithm;
+    kruskalAlgorithm.findMSTbyMatrix();
+    kruskalAlgorithm.sortMST();
     return 0;
 
 }

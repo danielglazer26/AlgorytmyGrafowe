@@ -11,6 +11,8 @@ private:
 
     void createTable();
 
+    void deleteTables();
+
 public:
 
     KruskalAlgorithm() {
@@ -18,9 +20,25 @@ public:
         createTable();
     }
 
+    ~KruskalAlgorithm(){
+        deleteTables();
+    }
+
     void findMSTbyMatrix();
 
     void findMSTbyList();
+
+    bool canAddThisEdge(int x, int y);
+
+    bool canAddThisEdge(int x);
+
+    void findMSTbyMatrix(int k);
+
+    void showMST();
+
+    void changeColor(int x, int y);
+
+    void sortMST();
 };
 
 

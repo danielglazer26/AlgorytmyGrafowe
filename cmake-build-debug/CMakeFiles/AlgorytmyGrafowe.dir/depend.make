@@ -10,7 +10,11 @@ CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj: ../Header/Lo
 CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj: ../Header/Matrix.h
 CMakeFiles/AlgorytmyGrafowe.dir/Source/GraphRepresentation.cpp.obj: ../Source/GraphRepresentation.cpp
 
+CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Header/CombinedList.h
+CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Header/GraphRepresentation.h
 CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Header/KruskalAlgorithm.h
+CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Header/LoadFromFile.h
+CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Header/Matrix.h
 CMakeFiles/AlgorytmyGrafowe.dir/Source/KruskalAlgorithm.cpp.obj: ../Source/KruskalAlgorithm.cpp
 
 CMakeFiles/AlgorytmyGrafowe.dir/Source/LoadFromFile.cpp.obj: ../Header/LoadFromFile.h
@@ -22,6 +26,7 @@ CMakeFiles/AlgorytmyGrafowe.dir/Source/Matrix.cpp.obj: ../Source/Matrix.cpp
 
 CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../Header/CombinedList.h
 CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../Header/GraphRepresentation.h
+CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../Header/KruskalAlgorithm.h
 CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../Header/LoadFromFile.h
 CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../Header/Matrix.h
 CMakeFiles/AlgorytmyGrafowe.dir/main.cpp.obj: ../main.cpp
