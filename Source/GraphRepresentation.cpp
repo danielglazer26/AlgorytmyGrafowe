@@ -2,6 +2,7 @@
 
 #include "../Header/GraphRepresentation.h"
 
+//wczytywanie danych inicjalizujacych graf
 void GraphRepresentation::graphInitialization(bool directed) {
 
     LoadFromFile *loadFromFile = new LoadFromFile();
