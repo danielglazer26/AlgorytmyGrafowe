@@ -1,3 +1,0 @@
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/AlgorytmyGrafowe.dir
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/elmod/CLionProjects/AlgorytmyGrafowe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
