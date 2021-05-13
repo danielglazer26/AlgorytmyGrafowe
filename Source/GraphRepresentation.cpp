@@ -34,12 +34,9 @@ void GraphRepresentation::createList(LoadFromFile *loadFromFile) {
 void GraphRepresentation::createMatrix(bool directed) {
     matrix = new Matrix(verticesNumber);
     matrix->createMatrix(combinedList);
-
-    matrix->showMatrix();
-    matrix->showMatrixWages();
 }
 
-CombinedList *GraphRepresentation::getList() {
+CombinedList *GraphRepresentation::getCombinedList() {
     return combinedList;
 }
 Matrix *GraphRepresentation::getMatrix(){

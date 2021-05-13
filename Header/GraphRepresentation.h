@@ -18,7 +18,7 @@ public:
         delete combinedList;
     }
 
-    CombinedList *getList();
+    CombinedList *getCombinedList();
     Matrix *getMatrix();
 
     int getEdgesNumber() const;

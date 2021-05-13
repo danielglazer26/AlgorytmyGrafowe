@@ -4,8 +4,10 @@
 int main() {
 
     KruskalAlgorithm kruskalAlgorithm;
+    kruskalAlgorithm.findMSTbyList();
+    kruskalAlgorithm.showMST();
     kruskalAlgorithm.findMSTbyMatrix();
-    kruskalAlgorithm.sortMST();
+    kruskalAlgorithm.showMST();
     return 0;
 
 }

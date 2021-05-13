@@ -11,34 +11,39 @@ private:
 
     void createTable();
 
-    void deleteTables();
+    void findMSTbyMatrix(int k);
 
-public:
-
-    KruskalAlgorithm() {
-        gr = new GraphRepresentation(false);
-        createTable();
-    }
-
-    ~KruskalAlgorithm(){
-        deleteTables();
-    }
-
-    void findMSTbyMatrix();
-
-    void findMSTbyList();
+    void findMSTbyList(int k);
 
     bool canAddThisEdge(int x, int y);
 
     bool canAddThisEdge(int x);
 
-    void findMSTbyMatrix(int k);
+    void changeColor(int x, int y);
+
+    bool addNextEdge(int *w_min, int x_min, int y_min, int k);
+
+    void deleteTables();
+
+    void sortMST();
+
+    void checkedPosition(const int position);
+
+public:
+
+
+    KruskalAlgorithm() {
+        gr = new GraphRepresentation(false);
+    }
+
+
+    void findMSTbyMatrix();
+
+    void findMSTbyList();
 
     void showMST();
 
-    void changeColor(int x, int y);
 
-    void sortMST();
 };
 
 
