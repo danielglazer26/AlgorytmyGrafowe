@@ -1,13 +1,12 @@
 #ifndef ALGORYTMYGRAFOWE_KRUSKALALGORITHM_H
 #define ALGORYTMYGRAFOWE_KRUSKALALGORITHM_H
 
-#include "GraphRepresentation.h"
+#include "AlgorithmsMST.h"
 
-class KruskalAlgorithm {
+class KruskalAlgorithm : public AlgorithmsMST{
 private:
-    int **tabLeMST;
+
     int *tableColor;
-    GraphRepresentation *gr;
 
     void createTable();
 
@@ -25,23 +24,17 @@ private:
 
     void deleteTables();
 
-    void sortMST();
-
-    void checkedPosition(const int position);
 
 public:
-
-
-    KruskalAlgorithm() {
-        gr = new GraphRepresentation(false);
-    }
 
 
     void findMSTbyMatrix();
 
     void findMSTbyList();
 
-    void showMST();
+    //void showMST();
+    KruskalAlgorithm(GraphRepresentation *graphRepresentation):
+    AlgorithmsMST(graphRepresentation) {}
 
 
 };

@@ -1,13 +1,18 @@
 #include <iostream>
 #include "Header/KruskalAlgorithm.h"
 
+void menu(){
+
+}
 int main() {
 
-    KruskalAlgorithm kruskalAlgorithm;
-    kruskalAlgorithm.findMSTbyList();
-    kruskalAlgorithm.showMST();
-    kruskalAlgorithm.findMSTbyMatrix();
-    kruskalAlgorithm.showMST();
+
+    GraphRepresentation *graphRepresentation = new GraphRepresentation(false);
+    KruskalAlgorithm *kruskalAlgorithm = new KruskalAlgorithm(graphRepresentation);
+    kruskalAlgorithm->findMSTbyList();
+    kruskalAlgorithm->showMST();
+    kruskalAlgorithm->findMSTbyMatrix();
+    kruskalAlgorithm->showMST();
     return 0;
 
 }
