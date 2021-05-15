@@ -1,5 +1,23 @@
 #include <iostream>
-#include "../Header/AlgorithmsMST.h"
+#include "../../Header/MinimalSpanningTree/AlgorithmsMST.h"
+
+//wpisujemy nowa krawedz do tabeli MST
+bool AlgorithmsMST::addNextEdge(int *w_min, int x_min, int y_min, int k) {
+
+    //jesli nie znalezlismy zadnej pasujacej krawedzi
+    //to wskaznik na minimalna wage bedzie wskazywal nullpointera
+    //wiec znalezlismy MST
+
+    if (w_min != nullptr) {
+        tabLeMST[k][0] = x_min;
+        tabLeMST[k][1] = y_min;
+        tabLeMST[k][2] = *w_min;
+
+        return true;
+    }
+    return false;
+
+}
 
 //sortuje krawedzie przed wyswietleniem
 void AlgorithmsMST::sortMST() {

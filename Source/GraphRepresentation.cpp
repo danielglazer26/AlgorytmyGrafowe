@@ -12,14 +12,14 @@ void GraphRepresentation::graphInitialization(bool directed) {
         verticesNumber = loadFromFile->getDataFromFile();
         startingVertex = loadFromFile->getDataFromFile();
         endingVertex = loadFromFile->getDataFromFile();
-        createList(loadFromFile);
-        createMatrix(directed);
+        createList(loadFromFile, directed);
+        createMatrix();
 
     } else
         std::cout << "Brak pliku\n";
 }
 
-void GraphRepresentation::createList(LoadFromFile *loadFromFile) {
+void GraphRepresentation::createList(LoadFromFile *loadFromFile, bool directed) {
 
     combinedList = new CombinedList(verticesNumber);
     int *edge = new int[3];
@@ -27,12 +27,15 @@ void GraphRepresentation::createList(LoadFromFile *loadFromFile) {
         for (int j = 0; j < 3; j++) {
             edge[j] = loadFromFile->getDataFromFile();
         }
-        combinedList->createUndirectedList(edge, &edge[1], &edge[2]);
+        if (directed)
+            combinedList->createDirectedList(edge, &edge[1], &edge[2]);
+        else
+            combinedList->createUndirectedList(edge, &edge[1], &edge[2]);
     }
     delete loadFromFile;
 }
 
-void GraphRepresentation::createMatrix(bool directed) {
+void GraphRepresentation::createMatrix() {
     matrix = new Matrix(verticesNumber);
     matrix->createMatrix(combinedList);
 }
@@ -40,7 +43,8 @@ void GraphRepresentation::createMatrix(bool directed) {
 CombinedList *GraphRepresentation::getCombinedList() {
     return combinedList;
 }
-Matrix *GraphRepresentation::getMatrix(){
+
+Matrix *GraphRepresentation::getMatrix() {
     return matrix;
 }
 

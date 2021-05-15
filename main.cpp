@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Header/KruskalAlgorithm.h"
+#include "Header/MinimalSpanningTree/KruskalAlgorithm.h"
+#include "Header/MinimalSpanningTree/PrimAlgorithm.h"
 
 void menu(){
 
@@ -7,12 +8,8 @@ void menu(){
 int main() {
 
 
-    GraphRepresentation *graphRepresentation = new GraphRepresentation(false);
-    KruskalAlgorithm *kruskalAlgorithm = new KruskalAlgorithm(graphRepresentation);
-    kruskalAlgorithm->findMSTbyList();
-    kruskalAlgorithm->showMST();
-    kruskalAlgorithm->findMSTbyMatrix();
-    kruskalAlgorithm->showMST();
+    GraphRepresentation *graphRepresentation = new GraphRepresentation(true);
+
     return 0;
 
 }

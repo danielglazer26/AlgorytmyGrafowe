@@ -6,7 +6,7 @@
 class KruskalAlgorithm : public AlgorithmsMST{
 private:
 
-    int *tableColor;
+    int *colorTable;
 
     void createTable();
 
@@ -20,8 +20,6 @@ private:
 
     void changeColor(int x, int y);
 
-    bool addNextEdge(int *w_min, int x_min, int y_min, int k);
-
     void deleteTables();
 
 
@@ -32,7 +30,6 @@ public:
 
     void findMSTbyList();
 
-    //void showMST();
     KruskalAlgorithm(GraphRepresentation *graphRepresentation):
     AlgorithmsMST(graphRepresentation) {}
 

@@ -1,31 +1,32 @@
 #include <iostream>
-#include "../Header/KruskalAlgorithm.h"
+#include "../../Header/MinimalSpanningTree/KruskalAlgorithm.h"
 
 //tworzymy tablice
 void KruskalAlgorithm::createTable() {
-    tableColor = new int[gr->getVerticesNumber()];
+    colorTable = new int[gr->getVerticesNumber()];
     tabLeMST = new int *[gr->getVerticesNumber() - 1];
 
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        tableColor[i] = i;
+        colorTable[i] = i;
         if (i != gr->getVerticesNumber() - 1)
             tabLeMST[i] = new int[3];
     }
 
 }
 
-//uruchamiamy rekurencyjnie algorytm
+//uruchamiamy rekurencyjnie algorytm dla macierzy
 void KruskalAlgorithm::findMSTbyMatrix() {
     createTable();
     findMSTbyMatrix(0);
 }
 
+//uruchamiany rekurencyjnie algorytm dla listy
 void KruskalAlgorithm::findMSTbyList() {
     createTable();
     findMSTbyList(0);
 }
 
-//rekurencyjna wersja algorytmu
+//rekurencyjna wersja algorytmu dla macierzy
 void KruskalAlgorithm::findMSTbyMatrix(int k) {
 
     int x_min;
@@ -48,15 +49,15 @@ void KruskalAlgorithm::findMSTbyMatrix(int k) {
             }
         }
     }
-    //jesli nie znalezlismy zadnej pasujacej krawedzi
-    //to wskaznik na minimalna wage bedzie wskazywal nullpointera
-    //wiec znalezlismy MST
-    if (addNextEdge(w_min, x_min, y_min, k))
+
+    if (addNextEdge(w_min, x_min, y_min, k)) {
+        changeColor(x_min, y_min);
         findMSTbyMatrix(k + 1);
+    }
 
 
 }
-
+//rekurencyjna wersja algorytmu dla listy
 void KruskalAlgorithm::findMSTbyList(int k) {
 
     int x_min;
@@ -83,8 +84,10 @@ void KruskalAlgorithm::findMSTbyList(int k) {
 
     }
 
-    if (addNextEdge(w_min, x_min, y_min, k))
+    if (addNextEdge(w_min, x_min, y_min, k)) {
+        changeColor(x_min, y_min);
         findMSTbyList(k + 1);
+    }
 
 }
 
@@ -93,7 +96,7 @@ bool KruskalAlgorithm::canAddThisEdge(int x, int y) {
     //jesli istnieja dwa wierzcholki w MST to sprawdzamy czy maja taki sam kolor
     if (canAddThisEdge(x)) {
         if (canAddThisEdge(y)) {
-            if (tableColor[x] == tableColor[y])
+            if (colorTable[x] == colorTable[y])
                 return false;
         }
     }
@@ -119,31 +122,18 @@ bool KruskalAlgorithm::canAddThisEdge(int x) {
 void KruskalAlgorithm::changeColor(int x, int y) {
 
 
-    int colorToChange = tableColor[y];
+    int colorToChange = colorTable[y];
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        if (tableColor[i] == colorToChange)
-            tableColor[i] = tableColor[x];
+        if (colorTable[i] == colorToChange)
+            colorTable[i] = colorTable[x];
     }
 
 
 }
 
-//wpisujemy nowa krawedz do tabeli MST
-bool KruskalAlgorithm::addNextEdge(int *w_min, int x_min, int y_min, int k) {
-
-    if (w_min != nullptr) {
-        tabLeMST[k][0] = x_min;
-        tabLeMST[k][1] = y_min;
-        tabLeMST[k][2] = *w_min;
-        changeColor(x_min, y_min);
-        return true;
-    }
-    return false;
-
-}
 void KruskalAlgorithm::deleteTables() {
     AlgorithmsMST::deleteTables();
-    delete tableColor;
+    delete colorTable;
 }
 
 
