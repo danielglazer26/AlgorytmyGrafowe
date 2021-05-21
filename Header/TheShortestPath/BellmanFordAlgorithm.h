@@ -3,34 +3,32 @@
 
 
 #include "../GraphRepresentation.h"
+#include "AlgorithmsTheShortestPath.h"
+#include "../Queue.h"
 
-class BellmanFordAlgorithm {
+class BellmanFordAlgorithm : public AlgorithmsTheShortestPath {
 private:
-    int ** pathTable;
-    bool * visitedTable;
 
-    void createTable();
-    void deleteTables();
-    void showPath(int k);
-    void showPathTable();
+    Queue *queue = new Queue();
 
-    void findMinimalPathByMatrix(int vertex, int *stack, int *stackIterator, int k);
+    void findMinimalPathByMatrix(int vertex);
+
+    void findMinimalPathByList(int vertex);
+
+    void checkQueue(int const i) const;
+
 public:
-    GraphRepresentation * gr;
 
-    BellmanFordAlgorithm(GraphRepresentation * graphRepresentation){
-        gr = graphRepresentation;
-    }
-
-    ~BellmanFordAlgorithm(){
-        deleteTables();
-    }
+    BellmanFordAlgorithm(GraphRepresentation *graphRepresentation)
+    :AlgorithmsTheShortestPath(graphRepresentation){}
 
     void findMinimalPathByList();
 
     void findMinimalPathByMatrix();
+    ~BellmanFordAlgorithm(){
+        delete queue;
+    }
 
-    void showPath();
 };
 
 

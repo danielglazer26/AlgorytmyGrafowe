@@ -1,26 +1,75 @@
-/*
 #include <iostream>
 #include "../../Header/TheShortestPath/DijkstraAlgorithm.h"
 
-void DijkstraAlgorithm::createTable() {
-    pathTable = new int *[gr->getVerticesNumber()];
-    visitedTable = new bool [gr->getVerticesNumber()];
-    for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        visitedTable[i] = false;
-        pathTable[i] = new int[2];
-        pathTable[i][0] = INT32_MAX; //odpowiednik nieskonczonosci
-        pathTable[i][1] = -1;
 
-    }
-    pathTable[gr->getStartingVertex()][0] = 0;
+void DijkstraAlgorithm::findMinimalPathByMatrix() {
+
+    createTable();
+    findMinimalPathByMatrix(findMinimum());
+
 }
-void DijkstraAlgorithm::findMinimalPathByMatrix(){
+
+void DijkstraAlgorithm::findMinimalPathByMatrix(int minVertex) {
+
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        if(visitedTable[i])
+        int *weight = gr->getMatrix()->getMatrixWeights()[minVertex][i];
+        if (weight != nullptr) {
+            if (pathTable[i][0] > *weight + pathTable[minVertex][0]) {
+                pathTable[i][0] = *weight + pathTable[minVertex][0];
+                pathTable[i][1] = minVertex;
+            }
+        }
     }
+    visitedTable[minVertex] = true;
+    int nextVertex = findMinimum();
+    if (nextVertex != -1)
+        findMinimalPathByMatrix(nextVertex);
+}
+
+
+int DijkstraAlgorithm::findMinimum() {
+    int minVertex = -1;
+    int *minWeight = nullptr;
+    for (int j = 0; j < gr->getVerticesNumber(); j++) {
+        if (!visitedTable[j]) {
+            if (minWeight == nullptr || *minWeight > pathTable[j][0]) {
+                minWeight = &pathTable[j][0];
+                minVertex = j;
+            }
+        }
+    }
+    return minVertex;
 }
 
 void DijkstraAlgorithm::findMinimalPathByList() {
 
+    createTable();
+    findMinimalPathByList(findMinimum());
 }
-*/
+
+void DijkstraAlgorithm::findMinimalPathByList(int minVertex) {
+
+    CombinedList::EdgeList *pointer = gr->getCombinedList()->getList()[minVertex];
+    if (pointer->vertex != -1) {
+        while (true) {
+            int *weight = &pointer->weight;
+            if (pathTable[pointer->vertex][0] > *weight + pathTable[minVertex][0]) {
+                pathTable[pointer->vertex][0] = *weight + pathTable[minVertex][0];
+                pathTable[pointer->vertex][1] = minVertex;
+            }
+            if (pointer->next != nullptr)
+                pointer = pointer->next;
+            else
+                break;
+        }
+    }
+    visitedTable[minVertex] = true;
+    int nextVertex = findMinimum();
+    if (nextVertex != -1)
+        findMinimalPathByList(nextVertex);
+}
+
+void DijkstraAlgorithm::deleteTables() {
+    AlgorithmsTheShortestPath::deleteTables();
+    delete visitedTable;
+}

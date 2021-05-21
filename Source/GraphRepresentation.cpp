@@ -19,6 +19,7 @@ void GraphRepresentation::graphInitialization(bool directed) {
         std::cout << "Brak pliku\n";
 }
 
+//wczytywanie krawedzi z pliku w celu utworzenia listy
 void GraphRepresentation::createList(LoadFromFile *loadFromFile, bool directed) {
 
     combinedList = new CombinedList(verticesNumber);
@@ -34,7 +35,7 @@ void GraphRepresentation::createList(LoadFromFile *loadFromFile, bool directed) 
     }
     delete loadFromFile;
 }
-
+//tworzenie macierzy sąsiedztwa na podstawie listy
 void GraphRepresentation::createMatrix() {
     matrix = new Matrix(verticesNumber);
     matrix->createMatrix(combinedList);

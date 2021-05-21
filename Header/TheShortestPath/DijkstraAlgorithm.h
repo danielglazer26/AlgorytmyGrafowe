@@ -5,20 +5,27 @@
 
 
 #include "../GraphRepresentation.h"
+#include "AlgorithmsTheShortestPath.h"
 
-class DijkstraAlgorithm {
+class DijkstraAlgorithm : public AlgorithmsTheShortestPath {
+
 private:
-    int ** pathTable;
-    bool * visitedTable;
+
+    void findMinimalPathByList(int minVertex);
+
+    void findMinimalPathByMatrix(int minVertex);
+
 public:
-    void createTable();
-    GraphRepresentation * gr;
-    DijkstraAlgorithm(GraphRepresentation * graphRepresentation){
-        gr = graphRepresentation;
-    }
+    DijkstraAlgorithm(GraphRepresentation *graphRepresentation)
+            : AlgorithmsTheShortestPath(graphRepresentation) {}
 
     void findMinimalPathByMatrix();
+
     void findMinimalPathByList();
+
+    int findMinimum();
+
+    void deleteTables();
 };
 
 

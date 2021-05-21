@@ -2,7 +2,7 @@
 #include <iostream>
 
 bool LoadFromFile::openFile(){
-    std::string nameOfFile = "test5.txt";
+    std::string nameOfFile = "testk.txt";
 
     /*std::cout << "Podaj nazwe pliku" << std::endl;
     std::cin >> nameOfFile;*/
