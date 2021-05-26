@@ -1,14 +1,14 @@
 #include <iostream>
 #include "../../Header/TheShortestPath/DijkstraAlgorithm.h"
 
-
+//wywolanie rekurencyjnego algorytmu dla macierzy
 void DijkstraAlgorithm::findMinimalPathByMatrix() {
 
     createTable();
     findMinimalPathByMatrix(findMinimum());
 
 }
-
+//rekurencyjne wyszukiwanie najkrotszej sciezki za pomoca macierzy
 void DijkstraAlgorithm::findMinimalPathByMatrix(int minVertex) {
 
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
@@ -26,7 +26,7 @@ void DijkstraAlgorithm::findMinimalPathByMatrix(int minVertex) {
         findMinimalPathByMatrix(nextVertex);
 }
 
-
+//wyszukujemy wierzcholek do ktorego prowadzi najkrotsza sciezka
 int DijkstraAlgorithm::findMinimum() {
     int minVertex = -1;
     int *minWeight = nullptr;
@@ -40,13 +40,13 @@ int DijkstraAlgorithm::findMinimum() {
     }
     return minVertex;
 }
-
+//wywolanie rekurencyjnego algorytmu dla listy
 void DijkstraAlgorithm::findMinimalPathByList() {
 
     createTable();
     findMinimalPathByList(findMinimum());
 }
-
+//rekurencyjne wyszukiwanie najkrotszej sciezki za pomoca listy
 void DijkstraAlgorithm::findMinimalPathByList(int minVertex) {
 
     CombinedList::EdgeList *pointer = gr->getCombinedList()->getList()[minVertex];
@@ -68,7 +68,7 @@ void DijkstraAlgorithm::findMinimalPathByList(int minVertex) {
     if (nextVertex != -1)
         findMinimalPathByList(nextVertex);
 }
-
+//usuwanie tablic, które są potrzebne do funkcjonowania algorytmu
 void DijkstraAlgorithm::deleteTables() {
     AlgorithmsTheShortestPath::deleteTables();
     delete visitedTable;

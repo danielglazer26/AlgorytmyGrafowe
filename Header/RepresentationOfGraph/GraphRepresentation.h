@@ -5,7 +5,7 @@
 
 #include "CombinedList.h"
 #include "Matrix.h"
-#include "LoadFromFile.h"
+#include "../LoadFromFile.h"
 
 class GraphRepresentation {
 public:

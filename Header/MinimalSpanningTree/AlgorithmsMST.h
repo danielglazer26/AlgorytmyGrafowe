@@ -2,7 +2,7 @@
 #ifndef ALGORYTMYGRAFOWE_ALGORITHMSMST_H
 #define ALGORYTMYGRAFOWE_ALGORITHMSMST_H
 
-#include "../GraphRepresentation.h"
+#include "../RepresentationOfGraph/GraphRepresentation.h"
 
 class AlgorithmsMST {
 private:

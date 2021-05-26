@@ -1,4 +1,4 @@
-#include "../Header/Queue.h"
+#include "../../Header/TheShortestPath/Queue.h"
 
 //dodanie elementu na poczatek
 void Queue::beginAddElementToQueue(int numberToAdd) {
@@ -26,7 +26,7 @@ void Queue::push(int numberToAdd) {
 int * Queue::getFirst() {
     return &head->number;
 }
-
+//wyrzucenie elementu z kolejki
 void Queue::pop() {
     ListElement *pointer;
     if (head != tail) {

@@ -1,66 +1,40 @@
 
 #include <iostream>
-#include "../Header/Matrix.h"
+#include "../../Header/RepresentationOfGraph/Matrix.h"
 
+//tworzenie tablicy wag
 void Matrix::createTables() {
 
-    matrixTable = new int *[size];
     matrixWeights = new int **[size];
 
     for (int i = 0; i < size; i++) {
-        matrixTable[i] = new int[size];
         matrixWeights[i] = new int *[size];
-    }
-    for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            matrixTable[i][j] = 0;
             matrixWeights[i][j] = nullptr;
         }
     }
 }
-
+//tworzenie macierzy wag na podstawie listy polaczonych sasiadow
 void Matrix::createMatrix(CombinedList *combinedList) {
 
     for (int i = 0; i < combinedList->getSize(); i++) {
 
-        CombinedList::edge * pointer = combinedList->getList()[i];
+        CombinedList::edge *pointer = combinedList->getList()[i];
         while (true) {
             int vE = pointer->vertex;
             int w = pointer->weight;
 
-            matrixTable[i][vE] = 1;
             matrixWeights[i][vE] = new int[1];
             *matrixWeights[i][vE] = w;
 
-            if(pointer->next!= nullptr)
+            if (pointer->next != nullptr)
                 pointer = pointer->next;
             else
                 break;
         }
     }
 }
-
-
-
-void Matrix::showMatrix() {
-    std::cout << "  ";
-    for (int i = 0; i < size + 1; i++) {
-
-        for (int j = 0; j < size; j++) {
-            if (i == 0)
-                std::cout << j << " ";
-            else
-                std::cout << matrixTable[i - 1][j] << " ";
-        }
-
-        if (i != size)
-            std::cout << std::endl << i << " ";
-
-    }
-    std::cout << std::endl;
-    std::cout << std::endl;
-}
-
+//wyswietlanie macierz wag
 void Matrix::showMatrixWages() {
 
     std::cout << "  ";
@@ -87,22 +61,16 @@ void Matrix::showMatrixWages() {
     std::cout << std::endl;
 
 }
-
+//usuwanie macierzy wag
 void Matrix::deleteMatrixTable() {
     for (int i = 0; i < size; i++) {
-        delete[] matrixTable[i];
         delete[] matrixWeights[i];
     }
-    delete matrixTable;
     delete matrixWeights;
 }
 
 int Matrix::getSize() const {
     return size;
-}
-
-int **Matrix::getMatrixTable() const {
-    return matrixTable;
 }
 
 int ***Matrix::getMatrixWeights() const {

@@ -1,13 +1,14 @@
 #include <iostream>
-#include "../Header/CombinedList.h"
+#include "../../Header/RepresentationOfGraph/CombinedList.h"
 
-
+//tworzenie nieskierowanej listy
 void CombinedList::createUndirectedList(int *vS, int *vE, int *w) {
 
     createDirectedList(vS, vE, w);
     createDirectedList(vE, vS, w);
 }
 
+//tworzenie skierowanej listy
 void CombinedList::createDirectedList(int *vS, int *vE, int *w) {
 
     edge *pointer = list[*vS];
@@ -26,7 +27,7 @@ void CombinedList::createDirectedList(int *vS, int *vE, int *w) {
 
     } while (true);
 }
-
+//wyswietlanie listy polaczonych sasiadow
 void CombinedList::showList() {
     edge *pointer;
     for (int i = 0; i < size; i++) {
@@ -43,15 +44,7 @@ void CombinedList::showList() {
         std::cout << "\n";
     }
 }
-
-int CombinedList::getSize() const {
-    return size;
-}
-
-CombinedList::EdgeList **CombinedList::getList() {
-    return list;
-}
-
+//usuwanie listy
 void CombinedList::deleteList() {
     edge *pointer;
     edge *pointer2;
@@ -70,4 +63,12 @@ void CombinedList::deleteList() {
         }
     }
     delete list;
+}
+
+CombinedList::EdgeList **CombinedList::getList() {
+    return list;
+}
+
+int CombinedList::getSize() const {
+    return size;
 }

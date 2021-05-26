@@ -2,13 +2,14 @@
 #define ALGORYTMYGRAFOWE_BELLMANFORDALGORITHM_H
 
 
-#include "../GraphRepresentation.h"
+#include "../RepresentationOfGraph/GraphRepresentation.h"
 #include "AlgorithmsTheShortestPath.h"
-#include "../Queue.h"
+#include "Queue.h"
 
 class BellmanFordAlgorithm : public AlgorithmsTheShortestPath {
 private:
 
+    //kolejka zawierajacy kolejnosc odkrywania wierzcholkow
     Queue *queue = new Queue();
 
     void findMinimalPathByMatrix(int vertex);
@@ -25,6 +26,7 @@ public:
     void findMinimalPathByList();
 
     void findMinimalPathByMatrix();
+
     ~BellmanFordAlgorithm(){
         delete queue;
     }

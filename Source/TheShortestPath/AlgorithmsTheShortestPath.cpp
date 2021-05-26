@@ -2,15 +2,20 @@
 #include <iostream>
 #include "../../Header/TheShortestPath/AlgorithmsTheShortestPath.h"
 
+//wyswietlanie sciezki dla problemu najkrotszej sciezki w grafie
 void AlgorithmsTheShortestPath::showPath() {
 
-    std::cout << "Start= " << gr->getStartingVertex() << "\nEnd Dst  Path" << std::endl;
-    for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        showPath(i);
-    }
-    deleteTables();
+    if (cycleDetector <= gr->getEdgesNumber()) {
+        std::cout << "Start= " << gr->getStartingVertex() << "\nEnd Dst  Path" << std::endl;
+        for (int i = 0; i < gr->getVerticesNumber(); i++) {
+            showPath(i);
+        }
+        deleteTables();
+    } else
+        std::cout << "Wystapil cykl ujemny" << std::endl;
 }
 
+//obliczanie dlugosci
 void AlgorithmsTheShortestPath::showPath(int k) {
     int i = k;
     int *stack = new int[gr->getVerticesNumber()];
@@ -29,6 +34,7 @@ void AlgorithmsTheShortestPath::showPath(int k) {
         std::cout << "Brak polaczenia";
     std::cout << std::endl;
 }
+
 void AlgorithmsTheShortestPath::showPathTable() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < gr->getVerticesNumber(); j++) {
@@ -42,7 +48,6 @@ void AlgorithmsTheShortestPath::showPathTable() {
     std::cout << std::endl;
 
 }
-
 
 
 void AlgorithmsTheShortestPath::deleteTables() {

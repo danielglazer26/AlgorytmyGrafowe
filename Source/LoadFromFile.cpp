@@ -1,8 +1,9 @@
 #include "../Header/LoadFromFile.h"
 #include <iostream>
 
+//zaladowanie pliku grafu
 bool LoadFromFile::openFile(){
-    std::string nameOfFile = "testk.txt";
+    std::string nameOfFile = "testK.txt";
 
     /*std::cout << "Podaj nazwe pliku" << std::endl;
     std::cin >> nameOfFile;*/
@@ -13,7 +14,7 @@ bool LoadFromFile::openFile(){
     else
         return true;
 }
-
+//pobieranie liczb z plikuw
 int LoadFromFile::getDataFromFile() {
 
     int number;

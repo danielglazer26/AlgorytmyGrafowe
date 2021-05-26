@@ -1,18 +1,23 @@
 #include <iostream>
 #include "../../Header/TheShortestPath/BellmanFordAlgorithm.h"
 
-
+//wywolanie rekurencyjnego algorytmu dla macierzy
 void BellmanFordAlgorithm::findMinimalPathByMatrix() {
 
+    cycleDetector = -1;
     createTable();
     queue->push(gr->getStartingVertex());
     findMinimalPathByMatrix(*queue->getFirst());
 
 }
 
+//rekurencyjne wyszukiwanie najkrotszej sciezki za pomoca macierzy
 void BellmanFordAlgorithm::findMinimalPathByMatrix(int vertex) {
+
+    cycleDetector++;
     visitedTable[vertex] = true;
     queue->pop();
+
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
         int *weight = gr->getMatrix()->getMatrixWeights()[vertex][i];
         if (weight != nullptr) {
@@ -23,20 +28,27 @@ void BellmanFordAlgorithm::findMinimalPathByMatrix(int vertex) {
             }
         }
     }
-    if (queue->getFirst() != nullptr)
-        findMinimalPathByMatrix(*queue->getFirst());
-
+    if (cycleDetector <= gr->getEdgesNumber()) {
+        if (queue->getFirst() != nullptr)
+            findMinimalPathByMatrix(*queue->getFirst());
+    }
 }
 
+//wywolanie rekurencyjnego algorytmu dla listy
 void BellmanFordAlgorithm::findMinimalPathByList() {
 
-    //kolejka zawierajacy kolejnosc odkrywania wierzcholkow
+    cycleDetector = -1;
     createTable();
     queue->push(gr->getStartingVertex());
     findMinimalPathByList(*queue->getFirst());
 }
 
+//rekurencyjne wyszukiwanie najkrotszej sciezki za pomoca listy
 void BellmanFordAlgorithm::findMinimalPathByList(int vertex) {
+
+    cycleDetector++;
+    visitedTable[vertex] = true;
+    queue->pop();
 
     CombinedList::EdgeList *pointer = gr->getCombinedList()->getList()[vertex];
     if (pointer->vertex != -1)  //sprawdzamy czy wierzchołek ma sciezki
@@ -52,20 +64,23 @@ void BellmanFordAlgorithm::findMinimalPathByList(int vertex) {
             else
                 break;
         }
-    if (queue->getFirst() != nullptr)
-        findMinimalPathByList(*queue->getFirst());
+    if (cycleDetector <= gr->getEdgesNumber()) {
+        if (queue->getFirst() != nullptr)
+            findMinimalPathByList(*queue->getFirst());
+    }
 
 }
 
 //sprawdzamy czy odwiedzilismy dany wierzcholek
 void BellmanFordAlgorithm::checkQueue(int const i) const {
 
-    if(visitedTable[i])
+    if (visitedTable[i])
         queue->beginAddElementToQueue(i);
     else
         queue->push(i);
 
 
 }
+
 
 

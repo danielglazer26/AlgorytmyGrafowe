@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../Header/GraphRepresentation.h"
+#include "../../Header/RepresentationOfGraph/GraphRepresentation.h"
 
 //wczytywanie danych inicjalizujacych graf
 void GraphRepresentation::graphInitialization(bool directed) {
@@ -15,8 +15,10 @@ void GraphRepresentation::graphInitialization(bool directed) {
         createList(loadFromFile, directed);
         createMatrix();
 
-    } else
+    } else {
         std::cout << "Brak pliku\n";
+        delete this;
+    }
 }
 
 //wczytywanie krawedzi z pliku w celu utworzenia listy

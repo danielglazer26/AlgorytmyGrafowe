@@ -16,22 +16,16 @@ public:
         deleteMatrixTable();
     }
 
-    void showMatrix();
-
     void showMatrixWages();
 
     void createMatrix(CombinedList *combinedList);
 
     int getSize() const;
 
-    int **getMatrixTable() const;
-
     int ***getMatrixWeights() const;
 
 private:
     int size;
-
-    int **matrixTable;
 
     int ***matrixWeights;
 

@@ -4,7 +4,7 @@
 #define ALGORYTMYGRAFOWE_DIJKSTRAALGORITHM_H
 
 
-#include "../GraphRepresentation.h"
+#include "../RepresentationOfGraph/GraphRepresentation.h"
 #include "AlgorithmsTheShortestPath.h"
 
 class DijkstraAlgorithm : public AlgorithmsTheShortestPath {
