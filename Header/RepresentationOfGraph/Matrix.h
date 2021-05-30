@@ -7,8 +7,8 @@
 
 class Matrix {
 public:
-    Matrix(int size) {
-        this->size = size;
+    Matrix(int s) {
+        size = s;
         createTables();
     }
 
@@ -22,12 +22,12 @@ public:
 
     int getSize() const;
 
-    int ***getMatrixWeights() const;
+    int **getMatrixWeights() const;
 
 private:
     int size;
 
-    int ***matrixWeights;
+    int **matrixWeights;
 
     void createTables();
 

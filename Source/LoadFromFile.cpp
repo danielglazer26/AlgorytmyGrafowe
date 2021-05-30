@@ -3,11 +3,11 @@
 
 //zaladowanie pliku grafu
 bool LoadFromFile::openFile(){
-    std::string nameOfFile = "testK.txt";
+    std::string nameOfFile/* = "test3.txt"*/;
 
-    /*std::cout << "Podaj nazwe pliku" << std::endl;
-    std::cin >> nameOfFile;*/
-
+    std::cout << "Podaj nazwe pliku" << std::endl;
+    std::cin >> nameOfFile;
+    std::cout << "\n";
     file.open(nameOfFile);
     if(!file.is_open())
         return false;

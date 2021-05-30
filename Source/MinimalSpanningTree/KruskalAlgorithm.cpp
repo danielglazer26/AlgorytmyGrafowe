@@ -16,13 +16,13 @@ void KruskalAlgorithm::createTable() {
 
 //uruchamiamy rekurencyjnie algorytm dla macierzy
 void KruskalAlgorithm::findMSTbyMatrix() {
-    createTable();
+
     findMSTbyMatrix(0);
 }
 
 //uruchamiany rekurencyjnie algorytm dla listy
 void KruskalAlgorithm::findMSTbyList() {
-    createTable();
+
     findMSTbyList(0);
 }
 
@@ -31,17 +31,19 @@ void KruskalAlgorithm::findMSTbyMatrix(int k) {
 
     int x_min;
     int y_min;
-    int *w_min = nullptr;
+    int w_min = INT32_MAX;
     // size - 1 bo zakladamy że nie wystepuja petle
 
     //szukamy krawedzi z najmniejsza waga, ktora nie spowoduje cyklu
     for (int i = 0; i < gr->getMatrix()->getSize() - 1; i++) {
         for (int j = i + 1; j < gr->getMatrix()->getSize(); j++) {
-            if (gr->getMatrix()->getMatrixWeights()[i][j] != nullptr) {
 
+            int pointer = gr->getMatrix()->getMatrixWeights()[i][j];
+
+            if (pointer != INT32_MAX) {
                 if (canAddThisEdge(i, j)) {
-                    if (w_min == nullptr || *gr->getMatrix()->getMatrixWeights()[i][j] < *w_min) {
-                        w_min = gr->getMatrix()->getMatrixWeights()[i][j];
+                    if (w_min == INT32_MAX || pointer < w_min) {
+                        w_min = pointer;
                         x_min = i;
                         y_min = j;
                     }
@@ -57,21 +59,22 @@ void KruskalAlgorithm::findMSTbyMatrix(int k) {
 
 
 }
+
 //rekurencyjna wersja algorytmu dla listy
 void KruskalAlgorithm::findMSTbyList(int k) {
 
     int x_min;
     int y_min;
-    int *w_min = nullptr;
+    int w_min = INT32_MAX;
 
     for (int i = 0; i < gr->getCombinedList()->getSize() - 1; i++) {
         CombinedList::EdgeList *pointer = gr->getCombinedList()->getList()[i];
         while (true) {
             if (canAddThisEdge(i, pointer->vertex)) {
-                if (w_min == nullptr || pointer->weight < *w_min) {
+                if (w_min == INT32_MAX || pointer->weight < w_min) {
                     x_min = i;
                     y_min = pointer->vertex;
-                    w_min = &pointer->weight;
+                    w_min = pointer->weight;
                 }
 
             }
@@ -94,26 +97,10 @@ void KruskalAlgorithm::findMSTbyList(int k) {
 bool KruskalAlgorithm::canAddThisEdge(int x, int y) {
 
     //jesli istnieja dwa wierzcholki w MST to sprawdzamy czy maja taki sam kolor
-    if (canAddThisEdge(x)) {
-        if (canAddThisEdge(y)) {
-            if (colorTable[x] == colorTable[y])
-                return false;
-        }
-    }
-    return true;
-
-}
-
-bool KruskalAlgorithm::canAddThisEdge(int x) {
-
-    //sprawdzamy czy wystepuje taki wierzcholek w MST
-
-    for (int i = 0; i < gr->getVerticesNumber() - 1; i++) {
-        if (tabLeMST[i][0] == x || tabLeMST[i][1] == x) {
-            return true;
-        }
-    }
-    return false;
+    if (colorTable[x] != colorTable[y])
+        return true;
+    else
+        return false;
 
 }
 
@@ -130,7 +117,7 @@ void KruskalAlgorithm::changeColor(int x, int y) {
 
 
 }
-
+//usuwanie tablic
 void KruskalAlgorithm::deleteTables() {
     AlgorithmsMST::deleteTables();
     delete colorTable;

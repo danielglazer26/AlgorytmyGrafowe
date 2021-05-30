@@ -24,8 +24,11 @@ public:
 
     AlgorithmsTheShortestPath(GraphRepresentation *graphRepresentation) {
         gr = graphRepresentation;
+        createTable();
     }
-
+    ~AlgorithmsTheShortestPath(){
+        deleteTables();
+    }
     void showPath();
 
     void showPathTable();

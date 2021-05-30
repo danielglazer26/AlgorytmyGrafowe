@@ -19,10 +19,10 @@ void BellmanFordAlgorithm::findMinimalPathByMatrix(int vertex) {
     queue->pop();
 
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
-        int *weight = gr->getMatrix()->getMatrixWeights()[vertex][i];
-        if (weight != nullptr) {
-            if (pathTable[i][0] > *weight + pathTable[vertex][0]) {
-                pathTable[i][0] = *weight + pathTable[vertex][0];
+        int weight = gr->getMatrix()->getMatrixWeights()[vertex][i];
+        if (weight != INT32_MAX) {
+            if (pathTable[i][0] > weight + pathTable[vertex][0]) {
+                pathTable[i][0] = weight + pathTable[vertex][0];
                 pathTable[i][1] = vertex;
                 checkQueue(i);
             }
@@ -80,6 +80,10 @@ void BellmanFordAlgorithm::checkQueue(int const i) const {
         queue->push(i);
 
 
+}
+
+void BellmanFordAlgorithm::deleteTables() {
+    AlgorithmsTheShortestPath::deleteTables();
 }
 
 

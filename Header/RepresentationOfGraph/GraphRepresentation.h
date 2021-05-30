@@ -2,7 +2,6 @@
 #ifndef ALGORYTMYGRAFOWE_GRAPHREPRESENTATION_H
 #define ALGORYTMYGRAFOWE_GRAPHREPRESENTATION_H
 
-
 #include "CombinedList.h"
 #include "Matrix.h"
 #include "../LoadFromFile.h"
@@ -12,10 +11,17 @@ public:
 
     GraphRepresentation(bool directed) { graphInitialization(directed); }
 
-    ~GraphRepresentation() {
-        delete matrix;
-        delete combinedList;
+    GraphRepresentation(bool directed, float graphDensity, int vNumber) {
+        createNewGraph(directed, graphDensity, vNumber);
     }
+
+    ~GraphRepresentation() {
+        if (combinedList != nullptr) {
+            delete matrix;
+            delete combinedList;
+        }
+    }
+
 
     CombinedList *getCombinedList();
 
@@ -30,8 +36,9 @@ public:
     int getEndingVertex() const;
 
 private:
-    CombinedList *combinedList;
+    CombinedList *combinedList = nullptr;
     Matrix *matrix;
+
     int edgesNumber;
     int verticesNumber;
     int startingVertex;
@@ -42,6 +49,12 @@ private:
     void createList(LoadFromFile *loadFromFile, bool directed);
 
     void createMatrix();
+
+    void createNewGraph(bool directed, float graphDensity, int vNumber);
+
+    void createListForNewGraph(bool directed, int vS, int vE, int w);
+
+    bool isNotConnection(int x, int y);
 };
 
 

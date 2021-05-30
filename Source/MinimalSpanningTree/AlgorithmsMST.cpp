@@ -2,16 +2,16 @@
 #include "../../Header/MinimalSpanningTree/AlgorithmsMST.h"
 
 //wpisujemy nowa krawedz do tabeli MST
-bool AlgorithmsMST::addNextEdge(int *w_min, int x_min, int y_min, int k) {
+bool AlgorithmsMST::addNextEdge(int w_min, int x_min, int y_min, int k) {
 
     //jesli nie znalezlismy zadnej pasujacej krawedzi
     //to wskaznik na minimalna wage bedzie wskazywal nullpointera
     //wiec znalezlismy MST
 
-    if (w_min != nullptr) {
+    if (w_min != INT32_MAX) {
         tabLeMST[k][0] = x_min;
         tabLeMST[k][1] = y_min;
-        tabLeMST[k][2] = *w_min;
+        tabLeMST[k][2] = w_min;
 
         return true;
     }
@@ -59,13 +59,12 @@ void AlgorithmsMST::showMST() {
         sum += tabLeMST[i][2];
     }
     std::cout << "Sum: " << sum << std::endl;
-    deleteTables();
 }
 
 //zwalnianie pamieci
 void AlgorithmsMST::deleteTables() {
     for (int i = 0; i < gr->getVerticesNumber() - 1; i++) {
-        delete[] tabLeMST;
+        delete[] tabLeMST[i];
     }
     delete tabLeMST;
 

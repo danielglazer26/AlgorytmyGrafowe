@@ -22,9 +22,9 @@ public:
 
     ~CombinedList() { deleteList(); }
 
-    void createUndirectedList(int *vS, int *vE, int *w);
+    void createUndirectedList(int vS, int vE, int w);
 
-    void createDirectedList(int *vS, int *vE, int *w);
+    void createDirectedList(int vS, int vE, int w);
 
     void showList();
 

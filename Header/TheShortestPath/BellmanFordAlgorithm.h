@@ -18,6 +18,8 @@ private:
 
     void checkQueue(int const i) const;
 
+    void deleteTables();
+
 public:
 
     BellmanFordAlgorithm(GraphRepresentation *graphRepresentation)

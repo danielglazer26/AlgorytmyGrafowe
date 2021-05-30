@@ -6,7 +6,7 @@
 void AlgorithmsTheShortestPath::showPath() {
 
     if (cycleDetector <= gr->getEdgesNumber()) {
-        std::cout << "Start= " << gr->getStartingVertex() << "\nEnd Dst  Path" << std::endl;
+        std::cout << "Start= " << gr->getStartingVertex() << "\nEnd Dist  Path" << std::endl;
         for (int i = 0; i < gr->getVerticesNumber(); i++) {
             showPath(i);
         }
@@ -17,6 +17,7 @@ void AlgorithmsTheShortestPath::showPath() {
 
 //obliczanie dlugosci
 void AlgorithmsTheShortestPath::showPath(int k) {
+
     int i = k;
     int *stack = new int[gr->getVerticesNumber()];
     int stackIterator = 0;
@@ -33,8 +34,10 @@ void AlgorithmsTheShortestPath::showPath(int k) {
     } else
         std::cout << "Brak polaczenia";
     std::cout << std::endl;
-}
 
+
+}
+//wyswietlanie tablicy sciezek
 void AlgorithmsTheShortestPath::showPathTable() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < gr->getVerticesNumber(); j++) {
@@ -49,15 +52,17 @@ void AlgorithmsTheShortestPath::showPathTable() {
 
 }
 
-
+//usuwanie tablic
 void AlgorithmsTheShortestPath::deleteTables() {
     for (int i = 0; i < gr->getVerticesNumber(); i++) {
         delete pathTable[i];
     }
     delete pathTable;
+    delete visitedTable;
 }
 
 void AlgorithmsTheShortestPath::createTable() {
+
     pathTable = new int *[gr->getVerticesNumber()];
     visitedTable = new bool[gr->getVerticesNumber()];
     for (int i = 0; i < gr->getVerticesNumber(); i++) {

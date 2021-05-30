@@ -3,6 +3,14 @@
 #include "Header/MinimalSpanningTree/PrimAlgorithm.h"
 #include "Header/TheShortestPath/DijkstraAlgorithm.h"
 #include "Header/TheShortestPath/BellmanFordAlgorithm.h"
+#include "Test/Tests.h"
+
+bool checkFile(GraphRepresentation *gr) {
+    if (gr != nullptr)
+        if (gr->getCombinedList() != nullptr)
+            return true;
+    return false;
+}
 
 void mstMenu() {
     int b;
@@ -13,45 +21,55 @@ void mstMenu() {
                   << "3. Wyswietl liste \n"
                   << "4. Algorytm Kruskala \n"
                   << "5. Algorytm Prima \n"
+                  << "6. Wyjscie \n"
                   << "Opcja:";
 
         std::cin >> b;
         switch (b - 1) {
             case 0:
-                unDirected = new GraphRepresentation(false);
+                if (checkFile(unDirected))
+                    delete unDirected;
+                else
+                    unDirected = new GraphRepresentation(false);
                 break;
             case 1:
-                if (unDirected != nullptr)
+                if (checkFile(unDirected))
                     unDirected->getMatrix()->showMatrixWages();
                 break;
             case 2:
-                if (unDirected != nullptr)
+                if (checkFile(unDirected))
                     unDirected->getCombinedList()->showList();
                 break;
             case 3:
-                if (unDirected != nullptr) {
-                    KruskalAlgorithm *ka = new KruskalAlgorithm(unDirected);
+                if (checkFile(unDirected)) {
+                    KruskalAlgorithm *kam = new KruskalAlgorithm(unDirected);
                     std::cout << "Rozwiazanie na macierzy \n";
-                    ka->findMSTbyMatrix();
-                    ka->showMST();
+                    kam->findMSTbyMatrix();
+                    kam->showMST();
+                    KruskalAlgorithm *kal = new KruskalAlgorithm(unDirected);
                     std::cout << "Rozwiazanie na liscie \n";
-                    ka->findMSTbyList();
-                    ka->showMST();
-                    delete ka;
+                    kal->findMSTbyList();
+                    kal->showMST();
+                    delete kal;
                 }
                 break;
             case 4:
-                if (unDirected != nullptr) {
-                    PrimAlgorithm *pa = new PrimAlgorithm(unDirected);
+                if (checkFile(unDirected)) {
+                    PrimAlgorithm *pam = new PrimAlgorithm(unDirected);
                     std::cout << "Rozwiazanie na macierzy \n";
-                    pa->findMSTbyMatrix();
-                    pa->showMST();
+                    pam->findMSTbyMatrix();
+                    pam->showMST();
+                    delete pam;
+                    PrimAlgorithm *pal = new PrimAlgorithm(unDirected);
                     std::cout << "Rozwiazanie na liscie \n";
-                    pa->findMSTbyList();
-                    pa->showMST();
-                    delete pa;
+                    pal->findMSTbyList();
+                    pal->showMST();
+                    delete pal;
                 }
                 break;
+            case 5:
+                if (checkFile(unDirected))
+                    delete unDirected;
 
         }
 
@@ -67,43 +85,59 @@ void spMenu() {
                   << "3. Wyswietl liste \n"
                   << "4. Algorytm Dijkstry \n"
                   << "5. Algorytm Bellmana-Forda \n"
+                  << "6. Wyjscie \n"
                   << "Opcja:";
 
         std::cin >> b;
         switch (b - 1) {
             case 0:
-                directed = new GraphRepresentation(true);
+                if (checkFile(directed))
+                    delete directed;
+                else
+                    directed = new GraphRepresentation(true);
                 break;
             case 1:
-                if (directed != nullptr)
+                if (checkFile(directed))
                     directed->getMatrix()->showMatrixWages();
                 break;
             case 2:
-                if (directed != nullptr)
+                if (checkFile(directed))
                     directed->getCombinedList()->showList();
                 break;
             case 3:
-                if (directed != nullptr) {
-                    DijkstraAlgorithm *da = new DijkstraAlgorithm(directed);
+                if (checkFile(directed)) {
+                    DijkstraAlgorithm *dam = new DijkstraAlgorithm(directed);
                     std::cout << "Rozwiazanie na macierzy \n";
-                    da->findMinimalPathByMatrix();
-                    da->showPath();
+                    dam->findMinimalPathByMatrix();
+                    dam->showPathTable();
+                    dam->showPath();
+                    delete dam;
+                    DijkstraAlgorithm *dal = new DijkstraAlgorithm(directed);
                     std::cout << "Rozwiazanie na liscie \n";
-                    da->findMinimalPathByList();
-                    da->showPath();
+                    dal->findMinimalPathByList();
+                    dal->showPathTable();
+                    dal->showPath();
+                    delete dal;
                 }
                 break;
             case 4:
-                if (directed != nullptr) {
-                    BellmanFordAlgorithm *bfa = new BellmanFordAlgorithm(directed);
+                if (checkFile(directed)) {
+                    BellmanFordAlgorithm *bfam = new BellmanFordAlgorithm(directed);
                     std::cout << "Rozwiazanie na macierzy \n";
-                    bfa->findMinimalPathByMatrix();
-                    bfa->showPath();
+                    bfam->findMinimalPathByMatrix();
+                    bfam->showPathTable();
+                    bfam->showPath();
+                    BellmanFordAlgorithm *bfal = new BellmanFordAlgorithm(directed);
                     std::cout << "Rozwiazanie na liscie \n";
-                    bfa->findMinimalPathByList();
-                    bfa->showPath();
+                    bfal->findMinimalPathByList();
+                    bfal->showPathTable();
+                    bfal->showPath();
+                    delete bfal;
                 }
                 break;
+            case 5:
+                if (checkFile(directed))
+                    delete directed;
 
         }
 
@@ -111,12 +145,12 @@ void spMenu() {
 }
 
 void menu() {
-    GraphRepresentation *unDirected = nullptr, *directed = nullptr;
-    int a, b;
+    int a;
     do {
         std::cout << "\n1. Minimalne drzewo rozpinajace \n"
                   << "2. Najkrotsza sciezka \n"
-                  << "3. Maksymalny przeplyw \n"
+                  << "3. Testy\n"
+                  << "4. Wyjscie \n"
                   << "Opcja:";
         std::cin >> a;
         switch (a - 1) {
@@ -126,6 +160,9 @@ void menu() {
             case 1:
                 spMenu();
                 break;
+            case 2:
+                (new Tests)->startTests();
+                break;
         }
 
     } while (a != 4);
@@ -134,21 +171,6 @@ void menu() {
 
 int main() {
     menu();
-    /*GraphRepresentation * graphRepresentation1 = new GraphRepresentation(false);
-    KruskalAlgorithm *kruskalAlgorithm= new KruskalAlgorithm(graphRepresentation1);
-    kruskalAlgorithm->findMSTbyList();
-    kruskalAlgorithm->showMST();
-    PrimAlgorithm * primAlgorithm = new PrimAlgorithm(graphRepresentation1);
-    primAlgorithm->findMSTbyMatrix();
-    primAlgorithm->showMST();*/
-
-    GraphRepresentation *graphRepresentation = new GraphRepresentation(true);
-    DijkstraAlgorithm *dijkstraAlgorithm = new DijkstraAlgorithm(graphRepresentation);
-    dijkstraAlgorithm->findMinimalPathByMatrix();
-    dijkstraAlgorithm->showPath();
-    BellmanFordAlgorithm *bellmanFordAlgorithm = new BellmanFordAlgorithm(graphRepresentation);
-    bellmanFordAlgorithm->findMinimalPathByMatrix();
-    bellmanFordAlgorithm->showPath();
 
     return 0;
 

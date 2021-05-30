@@ -3,7 +3,7 @@
 
 #include "AlgorithmsMST.h"
 
-class KruskalAlgorithm : public AlgorithmsMST{
+class KruskalAlgorithm : public AlgorithmsMST {
 private:
 
     int *colorTable;
@@ -16,12 +16,8 @@ private:
 
     bool canAddThisEdge(int x, int y);
 
-    bool canAddThisEdge(int x);
 
     void changeColor(int x, int y);
-
-    void deleteTables();
-
 
 public:
 
@@ -30,8 +26,16 @@ public:
 
     void findMSTbyList();
 
-    KruskalAlgorithm(GraphRepresentation *graphRepresentation):
-    AlgorithmsMST(graphRepresentation) {}
+    KruskalAlgorithm(GraphRepresentation *graphRepresentation) :
+            AlgorithmsMST(graphRepresentation) {
+        createTable();
+    }
+
+    void deleteTables();
+
+    ~KruskalAlgorithm(){
+        deleteTables();
+    }
 
 
 };

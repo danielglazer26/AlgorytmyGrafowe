@@ -5,15 +5,16 @@
 //tworzenie tablicy wag
 void Matrix::createTables() {
 
-    matrixWeights = new int **[size];
+    matrixWeights = new int *[size];
 
     for (int i = 0; i < size; i++) {
-        matrixWeights[i] = new int *[size];
+        matrixWeights[i] = new int [size];
         for (int j = 0; j < size; j++) {
-            matrixWeights[i][j] = nullptr;
+            matrixWeights[i][j] = INT32_MAX;
         }
     }
 }
+
 //tworzenie macierzy wag na podstawie listy polaczonych sasiadow
 void Matrix::createMatrix(CombinedList *combinedList) {
 
@@ -24,8 +25,7 @@ void Matrix::createMatrix(CombinedList *combinedList) {
             int vE = pointer->vertex;
             int w = pointer->weight;
 
-            matrixWeights[i][vE] = new int[1];
-            *matrixWeights[i][vE] = w;
+            matrixWeights[i][vE] = w;
 
             if (pointer->next != nullptr)
                 pointer = pointer->next;
@@ -34,6 +34,7 @@ void Matrix::createMatrix(CombinedList *combinedList) {
         }
     }
 }
+
 //wyswietlanie macierz wag
 void Matrix::showMatrixWages() {
 
@@ -44,8 +45,8 @@ void Matrix::showMatrixWages() {
             if (i == 0)
                 std::cout << j << " ";
             else {
-                if (matrixWeights[i - 1][j] != nullptr)
-                    std::cout << *matrixWeights[i - 1][j];
+                if (matrixWeights[i - 1][j] != INT32_MAX)
+                    std::cout << matrixWeights[i - 1][j];
                 else
                     std::cout << "-";
 
@@ -61,18 +62,19 @@ void Matrix::showMatrixWages() {
     std::cout << std::endl;
 
 }
+
 //usuwanie macierzy wag
 void Matrix::deleteMatrixTable() {
     for (int i = 0; i < size; i++) {
         delete[] matrixWeights[i];
     }
-    delete matrixWeights;
+    delete []matrixWeights;
 }
 
 int Matrix::getSize() const {
     return size;
 }
 
-int ***Matrix::getMatrixWeights() const {
+int **Matrix::getMatrixWeights() const {
     return matrixWeights;
 }

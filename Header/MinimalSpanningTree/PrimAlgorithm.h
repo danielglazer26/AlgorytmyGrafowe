@@ -11,11 +11,9 @@ private:
 
     void createTable();
 
-    void deleteTables();
+    void findMSTbyMatrix(int k, int * x_min, int * y_min);
 
-    void findMSTbyMatrix(int k);
-
-    void findMSTbyList(int k);
+    void findMSTbyList(int k, int * x_min, int * y_min);
 
 public:
 
@@ -23,8 +21,16 @@ public:
 
     void findMSTbyList();
 
+    void deleteTables();
+
     PrimAlgorithm(GraphRepresentation *graphRepresentation) :
-            AlgorithmsMST(graphRepresentation) {}
+            AlgorithmsMST(graphRepresentation) {
+        createTable();
+    }
+
+    ~PrimAlgorithm() {
+        deleteTables();
+    }
 };
 
 

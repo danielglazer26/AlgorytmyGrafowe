@@ -2,21 +2,23 @@
 #include "../../Header/RepresentationOfGraph/CombinedList.h"
 
 //tworzenie nieskierowanej listy
-void CombinedList::createUndirectedList(int *vS, int *vE, int *w) {
+void CombinedList::createUndirectedList(int vS, int vE, int w) {
 
+    //tworzenie listy nieskierowanej to tak naprawde stworzenie listy skierowanej
+    //z wierzcholkami o zamienionej kolejnosci
     createDirectedList(vS, vE, w);
     createDirectedList(vE, vS, w);
 }
 
 //tworzenie skierowanej listy
-void CombinedList::createDirectedList(int *vS, int *vE, int *w) {
+void CombinedList::createDirectedList(int vS, int vE, int w) {
 
-    edge *pointer = list[*vS];
+    edge *pointer = list[vS];
 
     do {
         if (pointer->vertex == -1) {
-            pointer->vertex = *vE;
-            pointer->weight = *w;
+            pointer->vertex = vE;
+            pointer->weight = w;
             break;
         } else {
             if (pointer->next == nullptr)

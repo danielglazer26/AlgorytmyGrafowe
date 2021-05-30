@@ -14,7 +14,7 @@ protected:
     int **tabLeMST;
     GraphRepresentation *gr;
 
-    bool addNextEdge(int *w_min, int x_min, int y_min, int k);
+    bool addNextEdge(int w_min, int x_min, int y_min, int k);
 
     virtual void deleteTables();
 public:
@@ -24,6 +24,7 @@ public:
     AlgorithmsMST(GraphRepresentation * graphRepresentation){
         gr = graphRepresentation;
     }
+
 };
 
 

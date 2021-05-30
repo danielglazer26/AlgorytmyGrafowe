@@ -15,17 +15,23 @@ private:
 
     void findMinimalPathByMatrix(int minVertex);
 
+    int findMinimum();
+
+    void deleteTables();
+
 public:
+
     DijkstraAlgorithm(GraphRepresentation *graphRepresentation)
-            : AlgorithmsTheShortestPath(graphRepresentation) {}
+            : AlgorithmsTheShortestPath(graphRepresentation) {;
+    }
 
     void findMinimalPathByMatrix();
 
     void findMinimalPathByList();
 
-    int findMinimum();
+    ~DijkstraAlgorithm() {
 
-    void deleteTables();
+    }
 };
 
 
