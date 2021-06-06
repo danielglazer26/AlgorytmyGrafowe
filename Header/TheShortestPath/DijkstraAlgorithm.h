@@ -29,9 +29,6 @@ public:
 
     void findMinimalPathByList();
 
-    ~DijkstraAlgorithm() {
-
-    }
 };
 
 

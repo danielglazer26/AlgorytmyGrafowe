@@ -10,21 +10,30 @@ void AlgorithmsTheShortestPath::showPath() {
         for (int i = 0; i < gr->getVerticesNumber(); i++) {
             showPath(i);
         }
-        deleteTables();
     } else
         std::cout << "Wystapil cykl ujemny" << std::endl;
+
 }
 
 //obliczanie dlugosci
 void AlgorithmsTheShortestPath::showPath(int k) {
 
+    bool exception = false;
     int i = k;
     int *stack = new int[gr->getVerticesNumber()];
     int stackIterator = 0;
     while (pathTable[i][1] != -1) {
         stack[stackIterator++] = i;
         i = pathTable[i][1];
+        if (stackIterator > gr->getVerticesNumber() - 1) {
+            exception = true;
+            break;
+        }
+
     }
+    if (exception)
+        std::cout << "Wynik moze byc niepoprawny\n";
+
     std::cout << " " << k << " | ";
     if (pathTable[k][0] != INT32_MAX) {
         std::cout << pathTable[k][0] << " | " << gr->getStartingVertex() << " ";
@@ -37,6 +46,7 @@ void AlgorithmsTheShortestPath::showPath(int k) {
 
 
 }
+
 //wyswietlanie tablicy sciezek
 void AlgorithmsTheShortestPath::showPathTable() {
     for (int i = 0; i < 3; i++) {

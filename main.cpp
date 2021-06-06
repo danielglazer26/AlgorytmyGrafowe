@@ -29,7 +29,6 @@ void mstMenu() {
             case 0:
                 if (checkFile(unDirected))
                     delete unDirected;
-                else
                     unDirected = new GraphRepresentation(false);
                 break;
             case 1:
@@ -93,7 +92,6 @@ void spMenu() {
             case 0:
                 if (checkFile(directed))
                     delete directed;
-                else
                     directed = new GraphRepresentation(true);
                 break;
             case 1:

@@ -16,7 +16,6 @@ private:
 
     bool canAddThisEdge(int x, int y);
 
-
     void changeColor(int x, int y);
 
 public:
@@ -33,7 +32,7 @@ public:
 
     void deleteTables();
 
-    ~KruskalAlgorithm(){
+    ~KruskalAlgorithm() {
         deleteTables();
     }
 
